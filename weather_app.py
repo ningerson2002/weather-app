@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Initialize window
 root = Tk()
-root.geometry("400x400")  # size of window (default)
+root.geometry("1280x720")  # size of window (default)
 root.resizable(0, 0)  # fixed window size
 
 root.title("Weather App -- Nic Ingerson")
@@ -41,7 +41,7 @@ def show_weather():
         feels_like_temp = int(weather_info["main"]["feels_like"] - kelvin)
         pressure = weather_info["main"]["pressure"]
         humidity = weather_info["main"]["humidity"]
-        wind_speed = weather_info["main"]["wind_speed"] * 3.6
+        # wind_speed = weather_info["main"]["wind_speed"] * 3.6
         sunrise = weather_info["sys"]["sunrise"]
         sunset = weather_info["sys"]["sunset"]
         timezone = weather_info["timezone"]
