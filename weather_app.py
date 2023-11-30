@@ -58,3 +58,8 @@ def show_weather():
         weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid City Name !!"
 
     tfield.insert(INSERT, weather)
+
+
+def time_format_for_location(utc_with_tz):
+    local_time = datetime.utcfromtimestamp(utc_with_tz)
+    return local_time.time()
