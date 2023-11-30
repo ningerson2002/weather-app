@@ -63,3 +63,36 @@ def show_weather():
 def time_format_for_location(utc_with_tz):
     local_time = datetime.utcfromtimestamp(utc_with_tz)
     return local_time.time()
+
+
+CITY_HEAD = Label(root, text="Enter City Name", font="Helvetica 12 bold").pack(
+    pady=10
+)  # to generate label heading
+
+INP_CITY = Entry(
+    root, textvariable=city_value, width=24, font="Helvetica 14 bold"
+).pack()  # entry field
+
+
+Button(
+    root,
+    command=show_weather,
+    text="Check Weather",
+    font="Helvetica 10",
+    bg="lightblue",
+    fg="black",
+    activebackground="teal",
+    padx=5,
+    pady=5,
+).pack(pady=20)
+
+# Output
+
+weather_now = Label(root, text="The weather is: ", font="helvetica 12 bold").pack(
+    pady=10
+)
+
+tfield = Text(root, width=46, height=10)
+tfield.pack()
+
+root.mainloop()
